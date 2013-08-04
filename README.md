@@ -97,7 +97,7 @@ the Rake prerequisite mechanism can be used:
 ``` ruby
 desc "Create Important File"
 file 'important.txt' do |t|
-  sh "touch #{t.name}"
+  execute :touch, t.name
 end
 desc "Upload Important File"
 task :upload => 'important.txt' do |t|
